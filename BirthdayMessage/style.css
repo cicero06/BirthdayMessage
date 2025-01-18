@@ -1,0 +1,110 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffcccc, #ffe6e6);
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  color: #333;
+  text-align: center;
+}
+
+#gift-container {
+  text-align: center;
+}
+
+#countdown {
+  margin: 20px 0;
+}
+
+#timer {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+#gift-box {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to bottom, #ff0000, #ff4d4d);
+  border-radius: 20px;
+  position: relative;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+#gift-box::before, #gift-box::after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  border-radius: 10px;
+}
+
+#gift-box::before {
+  width: 30px;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#gift-box::after {
+  width: 200px;
+  height: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#gift-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#birthday-content {
+  margin-top: 20px;
+  display: none;
+}
+
+#gift-card {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+#birthday-gif {
+  width: 100px; /* GIF'in genişliğini ayarlayın */
+  height: auto; /* Oran koruma */
+  position: fixed; /* Ekranın ortasında sabit durması için */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Tam merkezlemek için */
+  z-index: 10; /* Üstte görünmesi için */
+  border-radius: 10px; /* Hafif yuvarlatma (isteğe bağlı) */
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); /* Gölgelendirme (isteğe bağlı) */
+  display:block; /* İlk başta görünmez olacak */
+}
+
+#birthday-gif {
+  animation: fadeIn 1s ease-in-out; /* 1 saniyelik yavaş açılma */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#resim{
+  
+}
